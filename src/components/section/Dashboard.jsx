@@ -20,7 +20,7 @@ import { ComboboxDemo } from "../ui/ComboBox";
 
 function Dashboard() {
   const chartData = [
-    { month: "January", desktop: 186, mobile: 80 },
+    { month: "January", desktop: 188, mobile: 80 },
     { month: "February", desktop: 305, mobile: 200 },
     { month: "March", desktop: 237, mobile: 120 },
     { month: "April", desktop: 73, mobile: 190 },
