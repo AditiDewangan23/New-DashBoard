@@ -1,11 +1,12 @@
 import React from 'react'
-import { ChartContainer, ChartTooltip } from '../ui/chart'
-import { BarChart } from 'lucide-react'
+
 import { Bar } from 'recharts'
+import { Component } from '../ui/ChartConfig'
+
 
 function Subscriptions() {
     return (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full p-7'>
             <div className='flex flex-col gap-2'>
                 <span>Subscriptions</span>
                 <div className='flex flex-col'>
@@ -14,7 +15,7 @@ function Subscriptions() {
                 </div>
             </div>
             <div>
-            {/* <ChartContainer /> */}
+                <Component />
             </div>
         </div>
     )

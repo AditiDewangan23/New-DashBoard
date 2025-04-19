@@ -53,11 +53,11 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[100px] justify-between"
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
-            : "Select framework..."}
+            : "member"}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>

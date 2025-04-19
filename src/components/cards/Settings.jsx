@@ -1,15 +1,19 @@
 import React from 'react'
 import { Button } from '../ui/button';
-import { Switch } from '@radix-ui/react-switch';
+// import { Switch } from '@radix-ui/react-switch';
+import { Switch } from "@/components/ui/switch"
 
 function Settings() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-7 gap-5">
+
       <div className="flex flex-col h-1/5">
-        <span className="font-extrabold text-2xl">Cookie Settings</span>
-        <span className="text-gray-500">Manage your cookie settings here.</span>
+        <span className="font-extrabold text-xl">Cookie Settings</span>
+        <span className="text-gray-500 text-sm">Manage your cookie settings here.</span>
       </div>
+
       <div className="flex">
+
         <div className="flex flex-col h-1/5">
           <span className="font-bold">Strictly Necessary</span>
           <span className="text-gray-500">
@@ -18,7 +22,9 @@ function Settings() {
           </span>
         </div>
         <div>
+          {/* <Switch /> */}
           <Switch />
+
         </div>
       </div>
       <div className="flex">
@@ -30,6 +36,7 @@ function Settings() {
           </span>
         </div>
         <div>
+          {/* <Switch /> */}
           <Switch />
         </div>
       </div>
@@ -41,10 +48,11 @@ function Settings() {
           </span>
         </div>
         <div>
+          {/* <Switch /> */}
           <Switch />
         </div>
       </div>
-      <div><Button className={"bg-gray-400 w-full"}>Save prefrence</Button></div>
+      <div><Button className={"bg-gray-200 w-full"}>Save prefrence</Button></div>
     </div>
   );
 }

@@ -2,24 +2,38 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 import { Plus, Send } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 function MessageSection() {
   return (
-    <div className="flex flex-col ">
-      <div className=" flex h-1/5 gap-2">
-        <div className="">avtar</div>
+    <div className="flex flex-col p-7 gap-7">
 
-        <div className="flex flex-row justify-between">
+      <div className=" flex h-1/6 gap-3">
+
+        <div className="">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+        </div>
+
+        <div className="flex flex-row justify-between w-full">
+
           <div className="flex flex-col">
-            <span className="font-extrabold text-2xl">Sofia Davis</span>
-            <span className="text-gray-500">m@example.com</span>
+            <span className="font-bold text-lg">Sofia Davis</span>
+            <span className="text-gray-500 text-sm">m@example.com</span>
           </div>
+
           <Button className={"rounded-lg"}>
             <Plus />
           </Button>
+
         </div>
+
       </div>
-      <div className="h-3/5">
+
+      <div className="h-4/6">
         <div className="space-y-2 p-4">
           {/* Message from left */}
           <div className="flex justify-start">
@@ -50,7 +64,7 @@ function MessageSection() {
           </div>
         </div>
       </div>
-      <div className=" flex gap-2 h-1/5">
+      <div className=" flex gap-2 h-1/6">
         <Input placeholder="type your message" />
         <Button>
           <Send />

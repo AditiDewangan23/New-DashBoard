@@ -11,7 +11,7 @@ import {
   UserRound,
   Users,
 } from "lucide-react";
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "../ui/chart";
+// import { ChartContainer, ChartTooltip, ChartTooltipContent } from "../ui/chart";
 import { Bar, BarChart, XAxis, YAxis } from "recharts";
 import SaleCard from "./sale/SaleCard";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
