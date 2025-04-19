@@ -4,6 +4,9 @@ import TotalRevenue from '../cards/TotalRevenue';
 import { Calendar } from '../ui/calendar';
 import MoveGoal from '../cards/MoveGoal';
 import TeamMembers from '../cards/TeamMembers';
+import MessageSection from '../cards/MessageSection';
+import ExerciseGraph from '../cards/ExerciseGraph';
+import Settings from '../cards/Settings';
 
 function Dashboard2() {
   return (
@@ -18,12 +21,12 @@ function Dashboard2() {
 
       {/* Row Two Start */}
       <div className='col-span-3 row-span-5 rounded-lg'><TeamMembers/></div>
-      <div className='col-span-3 row-span-6 bg-black rounded-lg'></div>
-      <div className='col-span-6 row-span-5 bg-black rounded-lg'></div>
+      <div className='col-span-3 row-span-6 rounded-lg'><MessageSection /></div>
+      <div className='col-span-6 row-span-5 rounded-lg'><ExerciseGraph /></div>
       {/* Row Two End */}
 
       {/* Row Three Start */}
-      <div className='col-span-3 row-span-6 bg-black rounded-lg'></div>
+      <div className='col-span-3 row-span-6 rounded-lg'><Settings/></div>
       <div className='col-span-3 row-span-6 bg-black rounded-lg'></div>
       <div className='col-span-6 row-span-7 bg-black rounded-lg'></div>
       {/* Row Three End */}
