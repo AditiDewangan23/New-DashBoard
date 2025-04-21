@@ -34,7 +34,7 @@ function MessageSection() {
       </div>
 
       <div className="h-4/6">
-        <div className="space-y-2 p-4">
+        <div className="space-y-2 ">
           {/* Message from left */}
           <div className="flex justify-start">
             <div className="bg-gray-300 text-black px-4 py-2 rounded-lg max-w-xs">

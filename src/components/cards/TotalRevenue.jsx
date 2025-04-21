@@ -3,7 +3,7 @@ import { LineChartComp } from '../ui/LineChart'
 
 function TotalRevenue() {
   return (
-    <div className='flex flex-col w-full p-5'>
+    <div className='flex flex-col w-full p-5 h-auto'>
       <div className='flex flex-col gap-2'>
         <span className='font-bold'>Total Revenue</span>
         <div className='flex flex-col'>

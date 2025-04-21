@@ -5,7 +5,7 @@ import { Switch } from "@/components/ui/switch"
 
 function Settings() {
   return (
-    <div className="flex flex-col p-7 gap-5">
+    <div className="flex flex-col p-5 gap-3">
 
       <div className="flex flex-col h-1/5">
         <span className="font-extrabold text-xl">Cookie Settings</span>

@@ -18,31 +18,31 @@ import { MultipleLineChart } from '../ui/MultipleLineChart';
 
 function Dashboard2() {
   return (
-    <div id="root" className="grid grid-cols-12 w-full gap-4 p-8">
+    <div id="root" className="grid grid-cols-12  w-full gap-4 p-8 border-2 h-full">
 
       {/* Row One Start */}
-      <Card className="col-span-3 row-span-4 rounded-lg"><TotalRevenue /></Card>
-      <Card className='col-span-3 row-span-4  rounded-lg'><Subscriptions /></Card>
-      <Card className='col-span-2 row-span-5  rounded-lg'><Calendar /></Card>
-      <Card className='col-span-4 row-span-5  rounded-lg'><MoveGoal /></Card>
+      <Card className="col-span-3 row-span-4 h-72 rounded-lg"><TotalRevenue /></Card>
+      <Card className='col-span-3 row-span-4 h-72 rounded-lg'><Subscriptions /></Card>
+      <Card className='col-span-2 row-span-5 h-80 rounded-lg'><Calendar /></Card>
+      <Card className='col-span-4 row-span-5 h-80 rounded-lg'><MoveGoal /></Card>
       {/* Row One End */}
 
       {/* Row Two Start */}
-      <Card className='col-span-3 row-span-5 rounded-lg'><TeamMembers /></Card>
-      <Card className='col-span-3 row-span-6 rounded-lg'><MessageSection /></Card>
-      <div className='col-span-6 row-span-5 rounded-lg'><MultipleLineChart /></div>
+      <Card className='col-span-3 row-span-5  h-80 rounded-lg'><TeamMembers /></Card>
+      <Card className='col-span-3 row-span-6 h-96 rounded-lg'><MessageSection /></Card>
+      <div className='col-span-6  row-span-5  h-80 rounded-lg'><MultipleLineChart /></div>
       {/* Row Two End */}
 
       {/* Row Three Start */}
-      <Card className='col-span-3 row-span-6 rounded-lg'><Settings /></Card>
-      <Card className='col-span-3 row-span-6 rounded-lg'><LoginForm /></Card>
-      <Card className='col-span-6 row-span-7 rounded-lg'><PaymentMethod /></Card>
+      <Card className='col-span-3 row-span-6 h-96 rounded-lg'><Settings /></Card>
+      <Card className='col-span-3 row-span-6 h-96 rounded-lg'><LoginForm /></Card>
+      <Card className='col-span-6 row-span-7 h-96 rounded-lg'><PaymentMethod /></Card>
       {/* Row Three End */}
 
       {/* Row Four Start */}
-      <Card className='col-span-3 row-span-6  rounded-lg'><Payment /></Card>
-      <Card className='col-span-3 row-span-5  rounded-lg'><Report /></Card>
-      <Card className='col-span-6 row-span-4  rounded-lg'><Document /></Card>
+      <Card className='col-span-3 row-span-6 h-96 rounded-lg '><Payment /></Card>
+      <Card className='col-span-3 row-span-5 h-80 rounded-lg'><Report /></Card>
+      <Card className='col-span-6 row-span-4 h-80 rounded-lg'><Document /></Card>
       {/* Row Four End */}
 
     </div>

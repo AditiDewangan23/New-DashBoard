@@ -8,9 +8,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 function Payment() {
     return (
         <div>
-            <div className="flex flex-col gap-4 p-7">
+            <div className="flex flex-col gap-4 p-5 ">
                 <div className="flex flex-col ">
-                    <span className="font-extrabold text-2xl">Payments</span>
+                    <span className="font-bold text-xl">Payments</span>
                     <span className="text-gray-500">
                         Manage your payments.
                     </span>

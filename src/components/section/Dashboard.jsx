@@ -17,6 +17,7 @@ import SaleCard from "./sale/SaleCard";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import { ComboboxDemo } from "../ui/ComboBox";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "../ui/chart";
 
 function Dashboard() {
   const chartData = [

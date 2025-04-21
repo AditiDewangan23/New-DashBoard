@@ -9,13 +9,13 @@ export function LoginForm({
   ...props
 }) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-3", className)} {...props}>
       <div className="overflow-hidden">
         <CardContent className="grid p-0 md:grid">
-          <form className="p-6 md:p-8">
-            <div className="flex flex-col gap-6">
+          <form className="p-5 md:p-5">
+            <div className="flex flex-col gap-3">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold">Welcome back</h1>
+                <h1 className="text-xl font-bold">Welcome back</h1>
                 <p className="text-balance text-muted-foreground">
                   Login to your Acme Inc account
                 </p>
@@ -49,7 +49,7 @@ export function LoginForm({
                   Or continue with
                 </span>
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2">
                 <Button variant="outline" className="w-full">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -78,21 +78,13 @@ export function LoginForm({
                   <span className="sr-only">Login with Meta</span>
                 </Button>
               </div>
-              <div className="text-center text-sm">
-                Don&apos;t have an account?{" "}
-                <a href="#" className="underline underline-offset-4">
-                  Sign up
-                </a>
-              </div>
+              
             </div>
           </form>
           
         </CardContent>
       </div>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
-      </div>
+      
     </div>
   )
 }

@@ -18,12 +18,12 @@ import {
     ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-    { month: "January", desktop: 186, mobile: 80 },
-    { month: "February", desktop: 305, mobile: 200 },
-    { month: "March", desktop: 237, mobile: 120 },
-    { month: "April", desktop: 73, mobile: 190 },
-    { month: "May", desktop: 209, mobile: 130 },
-    { month: "June", desktop: 214, mobile: 140 },
+    { desktop: 186, mobile: 80 },
+    { desktop: 305, mobile: 200 },
+    { desktop: 237, mobile: 120 },
+    { desktop: 73, mobile: 190 },
+    { desktop: 209, mobile: 130 },
+    { desktop: 214, mobile: 140 },
 ]
 
 const chartConfig = {
@@ -39,48 +39,50 @@ const chartConfig = {
 
 export function MultipleLineChart() {
     return (
-        <Card>
-            <CardHeader>
-                <CardTitle>Exercise Minutes</CardTitle>
-                <CardDescription>Your exercise minutes are ahead of where you normally are.</CardDescription>
-            </CardHeader>
-            <CardContent>
-                <ChartContainer config={chartConfig}>
-                    <LineChart
-                        accessibilityLayer
-                        data={chartData}
-                        margin={{
-                            left: 12,
-                            right: 12,
-                        }}
-                    >
-                        <CartesianGrid vertical={false} />
-                        <XAxis
-                            dataKey="month"
-                            tickLine={false}
-                            axisLine={false}
-                            tickMargin={8}
-                            tickFormatter={(value) => value.slice(0, 3)}
-                        />
-                        <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-                        <Line
-                            dataKey="desktop"
-                            type="monotone"
-                            stroke="#ff0000"
-                            strokeWidth={2}
-                            dot={false}
-                        />
-                        <Line
-                            dataKey="mobile"
-                            type="monotone"
-                            stroke="#0000ff"
-                            strokeWidth={2}
-                            dot={false}
-                        />
-                    </LineChart>
-                </ChartContainer>
-            </CardContent>
-
-        </Card>
-    )
-}
+      <Card className={"p-5"}>
+        <CardHeader>
+          <CardTitle>Exercise Minutes</CardTitle>
+          <CardDescription>
+            Your exercise minutes are ahead of where you normally are.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer config={chartConfig} className={"h-1/4 w-full"}>
+            <div className="flex justify-center items-center w-full h-[280px] ">
+              <LineChart
+                width={600}
+                height={300}
+                data={chartData}
+                margin={{ left: 12, right: 12 }}
+              >
+                <CartesianGrid vertical={false} />
+                <XAxis
+                  dataKey="month"
+                  tickLine={false}
+                  axisLine={false}
+                  tickMargin={8}
+                  tickFormatter={(value) => value?.slice(0, 3)}
+                />
+                <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+                <Line
+                  dataKey="desktop"
+                  type="monotone"
+                  stroke="#ff0000"
+                  strokeWidth={2}
+                  dot={false}
+                />
+                <Line
+                  dataKey="mobile"
+                  type="monotone"
+                  stroke="#0000ff"
+                  strokeWidth={2}
+                  dot={false}
+                />
+              </LineChart>
+            </div>
+          </ChartContainer>
+        </CardContent>
+      </Card>
+    );
+  }
+  

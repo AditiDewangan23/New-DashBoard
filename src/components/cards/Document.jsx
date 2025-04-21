@@ -10,19 +10,19 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 function Document() {
   return (
     <div>
-      <div className="flex flex-col gap-4 p-7">
+      <div className="flex flex-col gap-3 p-5">
         <div className="flex flex-col ">
-          <span className="font-extrabold text-2xl">Share this document</span>
+          <span className="font-bold text-xl">Share this document</span>
           <span className="text-gray-500">
             Anyone with the link can view this document.
           </span>
         </div>
-        <div className='flex gap-5'>
+        <div className='flex gap-3'>
           <Input placeholder={"http://example.com/link/to/document"} />
           <Button>Copy Link</Button>
         </div>
         <hr />
-        <div className="flex gap-3">
+        <div className="flex gap-2">
           <div>
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />

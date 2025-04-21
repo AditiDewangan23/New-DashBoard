@@ -14,7 +14,7 @@ function Subscriptions() {
                     <span className='text-gray-500'>+180.1% from last month</span>
                 </div>
             </div>
-            <div>
+            <div className=''>
                 <Component />
             </div>
         </div>

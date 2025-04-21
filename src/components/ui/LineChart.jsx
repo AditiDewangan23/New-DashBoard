@@ -16,12 +16,12 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  {  desktop: 186, mobile: 80 },
+  {  desktop: 305, mobile: 200 },
+  {  desktop: 237, mobile: 120 },
+  {  desktop: 73, mobile: 190 },
+  {  desktop: 209, mobile: 130 },
+  {  desktop: 214, mobile: 140 },
 ]
 
 const chartConfig = {
@@ -36,41 +36,37 @@ const chartConfig = {
 }
 
 export function LineChartComp() {
-  return (
-    <ChartContainer config={chartConfig}>
-      <LineChart
-        accessibilityLayer
-        data={chartData}
-        margin={{
-          left: 5,
-          right: 5,
-        }}
-      >
-        <CartesianGrid vertical={false} />
-        <XAxis
-          dataKey="month"
-          tickLine={false}
-          axisLine={false}
-          tickMargin={8}
-          tickFormatter={(value) => value.slice(0, 3)}
-        />
-        <ChartTooltip
-          cursor={false}
-          content={<ChartTooltipContent hideLabel />}
-        />
-        <Line
-          dataKey="desktop"
-          type="natural"
-          stroke="#000000"
-          strokeWidth={2}
-          dot={{
-            fill: "#000000",
+    return (
+      <ChartContainer config={chartConfig}>
+        <LineChart
+          data={chartData}
+          height={180} // 👈 Reduce this value to make the graph shorter
+          margin={{
+            left: 5,
+            right: 5,
           }}
-          activeDot={{
-            r: 6,
-          }}
-        />
-      </LineChart>
-    </ChartContainer> 
-  )
-}
+        >
+          <CartesianGrid vertical={false} />
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={8}
+            tickFormatter={(value) => value.slice(0, 3)}
+          />
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent hideLabel />}
+          />
+          <Line
+            dataKey="desktop"
+            type="natural"
+            stroke="#000000"
+            strokeWidth={2}
+            dot={{ fill: "#000000" }}
+            activeDot={{ r: 6 }}
+          />
+        </LineChart>
+      </ChartContainer>
+    )
+  }  
